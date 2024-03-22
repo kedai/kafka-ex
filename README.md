@@ -16,7 +16,7 @@ curl -i -X POST -H "Content-Type:application/json" -d @source.json http://localh
  create table xxx
 ```
 
-- insert records, it will reflected in mysql2
+- insert records, it will be reflected in mysql2
 
 ## debugging
 - in schema-registry container
@@ -31,3 +31,7 @@ kafka-avro-console-consumer --bootstrap-server localhost:9092 \
 curl localhost:8083/connectors/<your-connector-name>/status
 ```
 
+- delete connector
+```
+curl -X DELETE localhost:8083/connectors/mysql-sink-connector
+```
